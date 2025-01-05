@@ -1,0 +1,337 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.6.0-1-g15f4949  Build Version: 1.6.7594.29634
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot
+  name="vtol_aircraft">
+  <link
+    name="base_link">
+    <inertial>
+      <origin
+        xyz="0.000101417109180213 2.92403768656357E-06 -5.94403594148668E-05"
+        rpy="0 0 0" />
+      <mass
+        value="35.6989229289987" />
+      <inertia
+        ixx="1.58037306093807"
+        ixy="0.00018991868392197"
+        ixz="-0.0147015600966159"
+        iyy="0.886477088556763"
+        iyz="-2.45390483723087E-05"
+        izz="2.44020919596226" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://vtol_aircraft/meshes/base_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://vtol_aircraft/meshes/base_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="front_right">
+    <inertial>
+      <origin
+        xyz="2.64598465493648E-06 -3.99375828796789E-07 -0.0504285324100329"
+        rpy="0 0 0" />
+      <mass
+        value="0.0187574695550542" />
+      <inertia
+        ixx="7.39722665886931E-06"
+        ixy="-1.73425337631669E-10"
+        ixz="2.36221474479102E-11"
+        iyy="7.3971911646716E-06"
+        iyz="1.70941933977132E-10"
+        izz="1.8385715807412E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://vtol_aircraft/meshes/front_right.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.298039215686275 0.298039215686275 0.298039215686275 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://vtol_aircraft/meshes/front_right.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="front_right_joint"
+    type="revolute">
+    <origin
+      xyz="0.51141 -0.34006 0.056098"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="front_right" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="front_left">
+    <inertial>
+      <origin
+        xyz="2.72114030686055E-06 -3.38746347333663E-07 -0.0504283291780782"
+        rpy="0 0 0" />
+      <mass
+        value="0.0187575948098208" />
+      <inertia
+        ixx="7.39723367675602E-06"
+        ixy="-1.67327554118017E-10"
+        ixz="3.24442012336623E-11"
+        iyy="7.39719614628775E-06"
+        iyz="1.77657158778485E-10"
+        izz="1.83858380153994E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://vtol_aircraft/meshes/front_left.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.298039215686275 0.298039215686275 0.298039215686275 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://vtol_aircraft/meshes/front_left.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="front_left_joint"
+    type="revolute">
+    <origin
+      xyz="0.51141 0.33994 0.056098"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="front_left" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="back_left">
+    <inertial>
+      <origin
+        xyz="2.73366731989855E-06 -2.98407245941101E-07 -0.0504287229117256"
+        rpy="0 0 0" />
+      <mass
+        value="0.0187573399036794" />
+      <inertia
+        ixx="7.39721561747263E-06"
+        ixy="-1.79042618576633E-10"
+        ixz="3.33710231372493E-11"
+        iyy="7.39717732236906E-06"
+        iyz="1.82044997592418E-10"
+        izz="1.83855795813629E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://vtol_aircraft/meshes/back_left.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.298039215686275 0.298039215686275 0.298039215686275 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://vtol_aircraft/meshes/back_left.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="back_left_joint"
+    type="revolute">
+    <origin
+      xyz="-0.35909 0.33994 0.056098"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="back_left" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="back_right">
+    <inertial>
+      <origin
+        xyz="2.65936021620616E-06 -3.53064077807108E-07 -0.0504285035042423"
+        rpy="0 0 0" />
+      <mass
+        value="0.0187574837275127" />
+      <inertia
+        ixx="7.39723178486097E-06"
+        ixy="-1.64115784399998E-10"
+        ixz="2.72814953024875E-11"
+        iyy="7.39718206991237E-06"
+        iyz="1.76020653214969E-10"
+        izz="1.83857132161055E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://vtol_aircraft/meshes/back_right.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.298039215686275 0.298039215686275 0.298039215686275 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://vtol_aircraft/meshes/back_right.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="back_right_joint"
+    type="revolute">
+    <origin
+      xyz="-0.35909 -0.34006 0.056098"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="back_right" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="center_prop">
+    <inertial>
+      <origin
+        xyz="0.0495416463444759 1.62634631162284E-06 -1.07668735412937E-06"
+        rpy="0 0 0" />
+      <mass
+        value="0.0313019983403624" />
+      <inertia
+        ixx="3.17041966044438E-06"
+        ixy="-2.43277443703949E-10"
+        ixz="4.32649409400615E-10"
+        iyy="1.87580819260692E-05"
+        iyz="-3.84418715738829E-10"
+        izz="1.8758525416591E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://vtol_aircraft/meshes/center_prop.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.333333333333333 0.333333333333333 0.333333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://vtol_aircraft/meshes/center_prop.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="center_prop_joint"
+    type="revolute">
+    <origin
+      xyz="-0.34799 -6.3757E-05 0.054213"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="center_prop" />
+    <axis
+      xyz="-1 0 0" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+</robot>
